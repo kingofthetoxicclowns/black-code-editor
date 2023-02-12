@@ -12,11 +12,9 @@ about               http:/localhost:3000/about             GET                  
 
 admin               http:/localhost:3000/admin             GET                  adminRouter
 
-contact             http:/localhost:3000/contact           GET                  contactRouter
+editor              http:/localhost:3000/editor            GET                  editorRouter
 
 logout              http:/localhost:3000/logout            GET                  logoutRouter
-
-help                http:/localhost:3000/help              GET                  helpRouter
 
 create              http:/localhost:3000/create          GET/POST               createRouter
 
@@ -25,3 +23,5 @@ delete              http:/localhost:3000/delete          GET/POST               
 edit                http:/localhost:3000/edit            GET/POST               editRouter
 
 login               http:/localhost:3000/login           GET/POST               loginRouter
+
+error               http:/localhost:3000/*                  GET                 errorRouter
