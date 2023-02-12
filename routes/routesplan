@@ -1,0 +1,27 @@
+Route Plan:
+
+Local Host: http:/localhost:3000
+
+Route               URL                                 HTTP Verbs              Route
+
+====================================================================================================
+
+index               http:/localhost:3000/                  GET                  indexRouter
+
+about               http:/localhost:3000/about             GET                  aboutRouter
+
+admin               http:/localhost:3000/admin             GET                  adminRouter
+
+contact             http:/localhost:3000/contact           GET                  contactRouter
+
+logout              http:/localhost:3000/logout            GET                  logoutRouter
+
+help                http:/localhost:3000/help              GET                  helpRouter
+
+create              http:/localhost:3000/create          GET/POST               createRouter
+
+delete              http:/localhost:3000/delete          GET/POST               deleteRouter
+
+edit                http:/localhost:3000/edit            GET/POST               editRouter
+
+login               http:/localhost:3000/login           GET/POST               loginRouter

@@ -1,0 +1,139 @@
+html {
+    background-image: url("https://img.freepik.com/premium-vector/cats-set-silhouette-white-background-vector_566661-2572.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #create_pannel {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: calc(50% - 250px);
+    width: 400px;
+    height: 500px;
+    background: black;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding-top: 42px;
+    margin: 0 auto;
+  }
+  
+  #login_name {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 250px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    color:#fff;
+  }
+  
+  #inputEmail {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 280px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 10px;
+  }
+  
+  #password_name {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 320px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    color:#fff;
+  }
+  
+  #inputPassword {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 350px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 10px;
+  }
+
+  #role_name {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 390px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    color:#fff;
+  }
+  
+  #inputRole {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 420px;
+    font-family: "Arial";
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 10px;
+  }  
+  
+  p {
+    background-color:white;
+    font-weight: 700;
+    color: black;
+    text-align:  center;
+}
+
+  #create {
+    border: 2px solid white;
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    top: 460px;
+    background: #000000;
+    border-radius: 10px;
+    color: white;
+    font-size: 14pt;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  #create:hover {
+    background: white;
+    color: black;
+  }
+  #create:active {
+    transform: scale(0.95);
+  }

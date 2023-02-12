@@ -1,0 +1,43 @@
+.header {
+      left: 0px;
+      width: 100%;
+      top: 0px;
+      height: 85px;
+      background: #000000;
+      position: absolute;
+      vertical-align: top;
+  }
+  
+  
+  .header a {
+      text-decoration: none;
+  }
+  
+  .header a:visited {
+      color: white;
+  }
+  
+  .header a:link {
+      color: white;
+  }
+  
+  .header ul {
+      float: right;
+      display: inline-table;
+      color: white;
+      list-style: no;
+  }
+  
+  .header li {
+      display: inline-block;
+      font-size: 60px;
+  }
+  
+  .header .a:hover {
+    cursor: pointer;
+    transform: scale(1.015);
+  }
+  .header .a:hover {
+    cursor: pointer;
+    transform: scale(1.015);
+  }

@@ -1,0 +1,193 @@
+body {
+    margin: 0px;
+    
+}
+
+#main {
+    padding: 4% 1.5em;
+    max-width: 55em;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    background: #000000;
+    position: absolute;
+    vertical-align: top;
+}
+
+
+a {
+    text-decoration: none;
+    outline: none !important;
+}
+
+.header a:visited {
+    color: #FFFFFF;
+}
+
+.header a:link {
+    color: #FFFFFF;
+}
+
+.header ul {
+    float: right;
+    display: inline-table;
+    color: white;
+    list-style: no;
+}
+
+.header li {
+    display: inline-block;
+    font-size: 60px;
+}
+
+.header .a:hover {
+  cursor: pointer;
+  transform: scale(1.015);
+}
+.header .a:hover {
+  cursor: pointer;
+  transform: scale(1.015);
+}
+
+.iconBar {
+    width: 85px;
+    background-color: #FFFFFF;
+}
+
+.iconBar a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.5s ease;
+    color: black;
+    font-size: 35px;
+}
+
+.iconBar a:hover {
+    background-color: #808080;
+
+}
+
+#files_bar {
+    position: absolute;
+    left: 85px;
+    top: 85px;
+    bottom: 0px;
+
+    width: 165px;
+    box-sizing: border-box;
+    background: #FFBD88;
+    border: 1px solid #FFFFFF;
+}
+
+#files_header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 100%;
+    height: 40px;
+    color: #FFFFFF;
+    background: #000000;
+    border-bottom: 1px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+#directory {
+    position: absolute;
+    top: 40px;
+    bottom: -14px;
+
+    width: 100%;
+    background: #000000;
+    box-sizing: border-box;
+}
+
+#files_header span {
+    display: flex;
+    position: absolute;
+    padding: 11px 20px;
+
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#files_header i {
+    opacity: 70%;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    bottom: 10px;
+}
+
+#files_header #add_file {
+    position: absolute;
+    right: 1px;
+    top: 2x;
+}
+
+#files_header i:hover {
+    opacity: 100%;
+}
+
+#files_header i:active {
+    transform: scale(0.8);
+}
+
+#tabs {
+    position: absolute;
+    left: 250px;
+    top: 85px;
+    right: 0px;
+
+    height: 41px;
+    background: #000000;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+#code {
+    position: absolute;
+    left: 425px;
+    right: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+}
+
+#console {
+    position: absolute;
+    left: 250px;
+    right: 0px;
+    bottom: -14px;
+
+    height: 142px;
+    background: #000000;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#console_title {
+    position: absolute;
+    top: 0px;
+    padding: 7px;
+    width: 120px;
+    height: 34px;
+    box-sizing: border-box;
+    background: #000000;
+    border-width: 2px 2px 2px 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    font-weight: bold;
+}
