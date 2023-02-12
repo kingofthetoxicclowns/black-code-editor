@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css"/>
+    <%- include ../blocks/icon -%>
+    <script src="/js/edit.js"> </script>
+  </head>
+  <body>
+    <div id="edit_account_pannel">
+    <IMG src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/cat-icon-18-256.png" style="
+margin: 0px 0px 0px 100px;
+width: 180px;
+">
+<main>
+    <form action="/edit/<%= accounts.Email %>" method="post">
+        <div class="form-horizontal">
+            <div class="form-group row">
+              <div id="login_name">Enter your Email</div>
+                <div class="col-sm-8">
+                    <label>
+                        <input type="email" id="inputEmail" placeholder="Email address" autofocus required class="form-control" name="Email"
+                        onchange='checkLogin(this.value)'>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <div id="password_name">Enter your new Password</div>
+                <div class="col-sm-7">
+                    <label>
+                        <input class="form-control" id="inputPassword" placeholder="Your Password" name="Password"required
+                        onchange='checkPassword(this.value)'>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <div id="role_name">Enter your Role</div>
+                <div class="col-sm-10">
+                    <label>
+                        <input class="form-control" id="inputRole" placeholder="Your Role" name="Role" required
+                        onchange='checkRole(this.value)'>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-sm-2"></label>
+                <div class="col-sm-10">
+                    <input type="submit" value="Edit" id="edit_account" class="btn btn-default btn-success"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+</html>
