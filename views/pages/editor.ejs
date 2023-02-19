@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat's Editor</title>
-    <%- include ../blocks/icon -%>
-    <link rel="stylesheet" href="/stylesheets/editor.css"/>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Editor</title>
+  <link rel="stylesheet" href="/stylesheets/editor.css"/>
+  <%- include ../blocks/icon -%>
+</head>
 
 <body>
-<div class="header">
+  
+  <div class="header">
     <a href="/"><IMG src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/cat-icon-18-256.png" style="width: 85px"></a>
     <ul>
       <a href="/"><li>Black Code
@@ -22,31 +22,123 @@
     </ul>
   </div>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<div class="iconBoard"></div>
   <div class="iconBar">
-    <a href="#"><i class="fa fa-file"></i></a>
-    <a href="#"><i class="fa fa-search"></i></a>
-    <a href="#"><i class="fa fa-share-alt"></i></a>
-    <a href="#"><i class="fa fa-caret-square-o-right"></i></a>
-    <a href="/login"><i class="fa fa-user"></i></a>
-    <a href="#"><i class="fa fa-cog"></i></a>
+    <div id="button-icon"><a button id="clear"><i class="fa fa-trash-o"></i></button></a></div>
+    <a class="popup-open" href="#"><i class="fa fa-cog"></i></a>
         </div>
-</div>
-  </div>
-<div id="leftdirectory"></div>
-  <div id="files_bar">
-    <div id="files_header">
-      <span>FILES</span>
-      <div id="add_file"><i class="fa fa-folder-open"></i></div>
+
+  <div id="ide-parent">
+    <div id="button-wrapper">
+      <button onclick="switchPanel(0)">HTML <i class="fa fa-html5"></i></button>
+      <button onclick="switchPanel(1)">CSS <i class="fa fa-css3"></i></button>
+      <button onclick="switchPanel(2)">JavaScript</button>
+      <button onclick="runEdit(3)">Result</button>
     </div>
-    <div id="directory"></div>
+    <div id="ide-container">
+      <div class="panel-wrapper">
+        <div id="html">
+&lt;!--predefined html, but editable--&gt;
+
+&lt;div class="circle"&gt;
+	click me!
+&lt;/div&gt;
+
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="css">
+/*predefined CSS, but editable*/
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: crimson;
+	margin: auto;
+	margin-top: 50px;
+	transition-duration: 300ms;
+}
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="js">
+//predefined JavaScript, but editable
+
+var circle = document.querySelector(".circle");
+var bool = false;
+
+circle.addEventListener('click', function() {
+	if (!bool) {
+		circle.style.background = "coral";
+		bool = true;
+	} else {
+		circle.style.background = "crimson";
+		bool = false;
+	}
+});
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <iframe id="result"></iframe>
+      </div>
+    </div>
   </div>
-  <div id="tabs"></div>
-  <div id="code"></div>
-  <div id="console">
-    <div id="console_title">CONSOLE</div>
   </div>
-  </div>
+<footer>
+  <div class="final_text"></div>
+  <p>Copyright &copy; All rights reserved
+    <br>Designed by Kirill Kuznetsov, 2022-2023
+  </p>
+</footer>
+
+<div class="popup-fade">
+	<div class="popup">
+		<a class="popup-close" href="#">Close</a>
+		<div class="iconBar-cog">
+    <div id="button-icon"><a button onclick='saveTextAsFile()' <i class="fa fa-floppy-o"></button></a></div>
+    <p>Save File</p>
+    <div id="button-icon"><a button onclick="runEdit(3)"><i class="fa fa-caret-square-o-right"></i></button></a></div>
+    <p>Run Code</p>
+    <a href="/login"><i class="fa fa-user"></i></a>
+    <p>Athentication</p>
+	</div>		
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js" type="text/javascript"
+    charset="utf-8"></script>
+    <script src="/js/editor.js"> </script>
+  <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function($) {
+	$('.popup-open').click(function() {
+		$('.popup-fade').fadeIn();
+		return false;
+	});	
+	
+	$('.popup-close').click(function() {
+		$(this).parents('.popup-fade').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.popup-fade').fadeOut();
+		}
+	});
+	
+	$('.popup-fade').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});
+</script>
+
 </body>
 
 </html>
